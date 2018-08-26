@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="mystyle.css">
+<body background="bg.jpg">
+<center>
+
+<div>
+<input name="demo" id="str">
+<input name="demo" id="sub">
+<button onClick="myFunction()">Search</button>
+<p id="demo"></p>
+      <p id="demo1"></p>
+      <p id="demo2"></p>	  
+<script>
+function myFunction() {
+    var str = document.getElementById("str").value;
+    var sub = document.getElementById("sub").value;
+    var result = str.split(" ");
+var length = result.length; 
+var count = 0;
+for (i=0;i<length;i++)
+{
+if( result[i].toUpperCase() == sub.toUpperCase() )
+ count++;
+}
+document.getElementById("demo").innerHTML = "Entered string :"+ str;
+document.getElementById("demo1").innerHTML = "Entered keyword :"+ sub;
+document.getElementById("demo2").innerHTML = "Keyword occurences :"+ count;
+}
+
+</script>
+</div>
+</center>
+</body>
+</html>
